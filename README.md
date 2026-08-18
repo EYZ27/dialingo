@@ -2,7 +2,7 @@
 
 > 2023 제1회 K-디지털 플랫폼 AI 경진대회 **우수상** · 4인 팀 · 2일 (2023.12.12~13)
 
-한국어 방언 사용자와 외국인의 소통을 위해, 방언 음성을 인식해 외국어로 통역하는 서비스입니다.
+한국어 방언 사용자와 외국인의 소통을 위해, 방언 음성을 인식해 외국어로 통역하는 서비스
 
 ![image](https://github.com/user-attachments/assets/92edddd9-ab41-464b-91b8-f784c14ca08f)
 ![image](https://github.com/user-attachments/assets/fa8ea35f-46ac-4d7b-b69e-1b76f0bc6bd5)
@@ -14,7 +14,7 @@
 ```
 
 - **번역 모델** — AI Hub 지역별 방언 발화 데이터(충청·경상·전라·제주)로 학습.
-  구현은 [dltkddn0525/kr-dialect-machine-translation](https://github.com/dltkddn0525/kr-dialect-machine-translation)을 기반으로 했습니다.
+  구현은 [dltkddn0525/kr-dialect-machine-translation](https://github.com/dltkddn0525/kr-dialect-machine-translation)을 기반으로 함.
 - **학습된 모델** — `myproject/translator/results/model.pth`, 토크나이저 `myproject/translator/dataset/bpe_4000.model`
 - **웹** — Django. 데모 음성은 `myproject/media/recordings/`
 - **배포** — Azure 웹앱 CI/CD (대회 계정 지원 종료로 현재 중단)
@@ -28,7 +28,5 @@
 
 ## 한계와 다음 과제
 
-Azure 음성 인식이 방언을 표준어만큼 잡아내지 못해 실사용 정확도가 아쉬웠습니다.
-방언 음성으로 직접 학습한 인식 모델로 교체하는 것이 다음 과제입니다.
-
-TTS를 붙이면 양방향 음성 대화가 되고, 데이터가 확보되면 외국어 쪽 방언으로도 확장할 수 있습니다.
+방언 음성 인식의 한계로 실사용 정확도에 한계가 존재함
+방언 음성으로 음성 인식 모델을 학습하여 사용한다면 정확도 개선을 기대할 수 있음
